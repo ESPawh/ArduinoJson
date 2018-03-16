@@ -20,6 +20,11 @@ class DynamicJsonObject : public JsonObject {
     return _buffer;
   }
 
+  void clear() {
+    List::clear();
+    _buffer.clear();
+  }
+
   size_t memoryUsage() const {
     return _buffer.size() + sizeof(JsonObject);
   }
