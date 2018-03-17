@@ -17,7 +17,7 @@ class DynamicJsonArray : public JsonArray {
       : JsonArray(&_buffer), _buffer(capacity - sizeof(JsonArray)) {}
 
   void clear() {
-    List::clear();
+    Internals::List<JsonVariant>::clear();
     _buffer.clear();
   }
 

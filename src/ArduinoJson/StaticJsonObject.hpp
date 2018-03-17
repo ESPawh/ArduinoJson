@@ -17,7 +17,7 @@ class StaticJsonObject : public JsonObject {
   StaticJsonObject() : JsonObject(&_buffer) {}
 
   void clear() {
-    List::clear();
+    Internals::List<JsonPair>::clear();
     _buffer.clear();
   }
 

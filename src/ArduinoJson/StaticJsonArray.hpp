@@ -17,7 +17,7 @@ class StaticJsonArray : public JsonArray {
   StaticJsonArray() : JsonArray(&_buffer) {}
 
   void clear() {
-    List::clear();
+    Internals::List<JsonVariant>::clear();
     _buffer.clear();
   }
 

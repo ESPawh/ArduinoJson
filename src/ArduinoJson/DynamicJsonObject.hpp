@@ -21,7 +21,7 @@ class DynamicJsonObject : public JsonObject {
   }
 
   void clear() {
-    List::clear();
+    Internals::List<JsonPair>::clear();
     _buffer.clear();
   }
 
